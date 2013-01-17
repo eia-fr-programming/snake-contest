@@ -1,7 +1,7 @@
 snake-contest
 =============
 
-Snake Java Programming Contest
+Snake Java Programming Contest - By Ivo Blöchliger.
 
 Goal
 ----
