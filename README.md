@@ -55,20 +55,20 @@ At each step, computeNextStep() is called once. No more than 20ms real time can 
 
 If unsure, you may measure time with
 
-        // at the beginning of your method
-        long timeStarted = System.nanoTime();
-        // do something
-        // check available time
-        if (System.nanoTime() - timeUsed > 1e6*20) {
-          // time is up, terminate as quickly as possible!
-        }
+    // at the beginning of your method
+    long timeStarted = System.nanoTime();
+    // do something
+    // check available time
+    if (System.nanoTime() - timeUsed > 1e6*20) {
+        // time is up, terminate as quickly as possible!
+    }
       
 
 or regularily check
 
-        if (Thread.interrupted()) {
-          // finish your computations immediately
-        }
+    if (Thread.interrupted()) {
+        // finish your computations immediately
+    }
       
 
 Strategies being caught in endless loops (i.e. not terminating for more than 1s) will be permanently disqualified.
